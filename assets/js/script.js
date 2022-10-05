@@ -35,6 +35,11 @@ function printFormData(projectName, projectType, wage, date) {
     var dateEl = $('<td>')
     var daysUntilEl = $('<td>')
     var estimatedEarningEl = $('<td>')
+    var deleteButton = $('<td>')
+    var dbl = $('<button>')
+    dbl.text('delete')
+    deleteButton.append(dbl)
+    dbl.on('click', deletItem)
     var elementArray = [projectNameEl, projectTypeEl, wageEl, dateEl, daysUntilEl, estimatedEarningEl]
     projectNameEl.text(projectName)
     projectTypeEl.text(projectType)
@@ -48,7 +53,14 @@ function printFormData(projectName, projectType, wage, date) {
         console.log(tableEl)
         trEl.append(tableEl)
     }
+    trEl.append(deleteButton)
     projectTableEl.append(trEl)
     modalEl.modal('toggle')
 
+}
+
+function deletItem(event) {
+    console.log(event)
+    console.log(this)
+    $(this).closest('tr').remove();
 }
