@@ -12,21 +12,22 @@
 </head>
 
 <body>
-    <header class="bg-dark text-white">
-        Welcome to our Project Tracker!
-        <p>Current Time: <span id="clock"></span></p>
+    <header class="bg-dark text-white text-center py-4">
+        <h1>Welcome to our Project Tracker!</h1>
+        <h2>Current Time: <span id="clock"></span></h2>
     </header>
-    <div class="row">
+    <div class="container">
+    <div class="row g-2">
         <div class="card col-3" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
+                <h5 class="card-title">Instructions</h5>
+                <p class="card-text">Click the button below to open a form and provide information for the following:</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                <li class="list-group-item">Project Name</li>
+                <li class="list-group-item">Project Type</li>
+                <li class="list-group-item">Due date</li>
+                <li class="list-group-item">Hourly Wage</li>
             </ul>
             <div class="card-body">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-project-modal">Add
@@ -35,7 +36,7 @@
             </div>
 
         </div>
-        <table class="table col-9" id = "project-table">
+        <table class="table col-9" >
             <thead>
                 <tr>
                     <th scope="col">Project Name</th>
@@ -47,9 +48,10 @@
                     <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id = "project-table">
             </tbody>
         </table>
+    </div>
     </div>
     <div class="modal fade" id="add-project-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
