@@ -16,11 +16,13 @@
         <h1>Welcome to our Project Tracker!</h1>
         <h2>Current Time: <span id="clock"></span></h2>
     </header>
-    <div class="container">
-    <div class="row g-2">
-        <div class="card col-3" style="width: 18rem;">
+    <div class="container m-3">
+    <div class="row">
+        <div class="col-3 card px-0">
+            <div class="card-header bg-dark text-white">
+                <h5>Instructions</h5>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">Instructions</h5>
                 <p class="card-text">Click the button below to open a form and provide information for the following:</p>
             </div>
             <ul class="list-group list-group-flush">
@@ -29,14 +31,14 @@
                 <li class="list-group-item">Due date</li>
                 <li class="list-group-item">Hourly Wage</li>
             </ul>
-            <div class="card-body">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-project-modal">Add
+            <div class="card-body bg-dark">
+                <button type="button" class="btn bg-light" data-toggle="modal" data-target="#add-project-modal">Add
                     Project</button>
 
             </div>
 
         </div>
-        <table class="table col-9" >
+        <table class="col-9 table " >
             <thead>
                 <tr>
                     <th scope="col">Project Name</th>
